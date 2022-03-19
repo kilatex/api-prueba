@@ -19,9 +19,9 @@ use App\Http\Controllers\API\AuthController;
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::post('/login',[AuthController::class,'login']);
 Route::post('/register',[AuthController::class,'register']);
-
 Route::post('api/person/register', [PersonController::class,'store']);
 Route::get('api/person/{number?}', [PersonController::class,'list']);
 Route::post('api/person/update/{id_person?}', [PersonController::class,'update']);

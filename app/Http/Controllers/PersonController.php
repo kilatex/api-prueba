@@ -9,7 +9,9 @@ use Illuminate\Support\Facades\Storage;
 
 class PersonController extends Controller
 {
- 
+    public function __construct(){
+        $this->middleware('auth:api');
+     }
     
     public function store(Request $request){
 
@@ -89,7 +91,7 @@ class PersonController extends Controller
                 $people = Person::where('type_person',2)->get();
                 if(count($people) <= 0){ $message = "No hay personas de tipo 2 registradas"; }
                 break;
-                
+
             case '':
                 $people = Person::get();
                 if(count($people) <= 0) $message = "No hay personas registradas";
