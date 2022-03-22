@@ -22,10 +22,14 @@ Route::get('/', function () {
 
 Route::post('/login',[AuthController::class,'login']);
 Route::post('/register',[AuthController::class,'register']);
+
+Route::get('api/profile/{id?}', [PersonController::class,'show'])->middleware('auth:api');
 Route::post('api/person/register', [PersonController::class,'store']);
-Route::get('api/person/{number?}', [PersonController::class,'list']);
-Route::post('api/person/update/{id_person?}', [PersonController::class,'update']);
-Route::delete('api/person/{id_person?}', [PersonController::class,'destroy']);
+Route::get('api/person/{number?}', [PersonController::class,'list'])->middleware('auth:api');
+Route::get('api/person/avatar/{filename?}', [PersonController::class,'getAvatar']);
+Route::post('api/person/update/{id_person?}', [PersonController::class,'update'])->middleware('auth:api');
+Route::post('api/person/search', [PersonController::class,'search'])->middleware('auth:api');
+Route::delete('api/person/{id_person?}', [PersonController::class,'destroy'])->middleware('auth:api');
 
 
 /*

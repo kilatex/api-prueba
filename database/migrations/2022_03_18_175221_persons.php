@@ -13,14 +13,14 @@ class Persons extends Migration
      */
     public function up()
     {
-        Schema::create('persons', function (Blueprint $table) {
+        Schema::create('people', function (Blueprint $table) {
             $table->id();
             $table->string('first_name');
             $table->string('last_name');
             $table->string('document');
             $table->string('img');
             $table->integer('type_person');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -33,6 +33,6 @@ class Persons extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('persons');
+        Schema::dropIfExists('people');
     }
 }

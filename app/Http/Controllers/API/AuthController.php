@@ -4,8 +4,12 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
+
 use App\User;
 
 
@@ -60,4 +64,7 @@ class AuthController extends Controller
 
 
     }
+
+
+
 }
