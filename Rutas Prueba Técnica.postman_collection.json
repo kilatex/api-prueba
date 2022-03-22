@@ -1,0 +1,307 @@
+{
+	"info": {
+		"_postman_id": "3aca840c-3737-4f77-9660-d28233b4507a",
+		"name": "Rutas Prueba Técnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "pruebas@amobasoftware.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "134679",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/person/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"person",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGISTER ADMIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "pruebas@amobasoftware.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "134679",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "134679",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Person",
+			"item": [
+				{
+					"name": "Register Person",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiM2M2N2RmMTY2MDI5N2M2ZjE3ODIyNzBkNTdhYjFiMDQ5ZGFhZmQ2NzhhNGEwMTRlOWI1MWQ5MzRjMzM1NzczMjQ3MTNjODA2NjM3ODgwYzgiLCJpYXQiOjE2NDc4NzA0MTQuMDE0NDUxLCJuYmYiOjE2NDc4NzA0MTQuMDE0NDU4LCJleHAiOjE2Nzk0MDY0MTMuOTk5Njc3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.tioJhWlFMzJiQnckhKbGWT-JTf087rl6hzE134qHJ36FUmTVa_3sUwBpXiYhW76OPmsgtx02Sk1AnyqOs0zATrbcpuJXiImuljgvFx4rB-iONQFNyB6IrLmXHtKqhuLYXfVa9qVbU3TkFB0ES_vpFuZy1MVoim7ilpLcWA4bBUJbjsVY72_o1mIn3ZDBMw2ZOLV_fgtIl8L7TWzBN39AuQ9aueCxDkgB9pGZVQF7yDLUSJe0jvv4v-sg-p9tdSBvOUU6rUrXmHdFUD7ahSAWq-BGkqYyK8Mm0GllPULf16oSYsFuiPbwpOs6wyI7oMprw75gPp2AglvfhKJjw3GWt0y8QHzHQtq-jzV_fcahaTLIpmMA48wgxUlh7KTkEijLl8TJWhIThqnyZa3izOLVIS1UcnUWFrPcAsjsBsVcZLN6M99NNCCDsYHfIp9t8hh4DOtfMML0XffS0joiP47KyeyjICHv4E4RvXVvxSXPekklNrbGQlKfG9zu4UgmmEwNjOFkO4mr5v4-5SLue84DBBbkJ6dnsewZLgvDBXTgAjkMUo_AByvKfAW_svVKablBICjzVLMgnrWPygPPpoS35OsEEjvZUR3zv6yM6sClXoWLxg9afRp0RETfxHuaOmUcN1D7pbMHSNynKCRhaHUxa2moAopv2c_nRGOzybtASqs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Maria",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Torres",
+									"type": "text"
+								},
+								{
+									"key": "type_person",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "document",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "maaaria@maria.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/person/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"person",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Person",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiM2M2N2RmMTY2MDI5N2M2ZjE3ODIyNzBkNTdhYjFiMDQ5ZGFhZmQ2NzhhNGEwMTRlOWI1MWQ5MzRjMzM1NzczMjQ3MTNjODA2NjM3ODgwYzgiLCJpYXQiOjE2NDc4NzA0MTQuMDE0NDUxLCJuYmYiOjE2NDc4NzA0MTQuMDE0NDU4LCJleHAiOjE2Nzk0MDY0MTMuOTk5Njc3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.tioJhWlFMzJiQnckhKbGWT-JTf087rl6hzE134qHJ36FUmTVa_3sUwBpXiYhW76OPmsgtx02Sk1AnyqOs0zATrbcpuJXiImuljgvFx4rB-iONQFNyB6IrLmXHtKqhuLYXfVa9qVbU3TkFB0ES_vpFuZy1MVoim7ilpLcWA4bBUJbjsVY72_o1mIn3ZDBMw2ZOLV_fgtIl8L7TWzBN39AuQ9aueCxDkgB9pGZVQF7yDLUSJe0jvv4v-sg-p9tdSBvOUU6rUrXmHdFUD7ahSAWq-BGkqYyK8Mm0GllPULf16oSYsFuiPbwpOs6wyI7oMprw75gPp2AglvfhKJjw3GWt0y8QHzHQtq-jzV_fcahaTLIpmMA48wgxUlh7KTkEijLl8TJWhIThqnyZa3izOLVIS1UcnUWFrPcAsjsBsVcZLN6M99NNCCDsYHfIp9t8hh4DOtfMML0XffS0joiP47KyeyjICHv4E4RvXVvxSXPekklNrbGQlKfG9zu4UgmmEwNjOFkO4mr5v4-5SLue84DBBbkJ6dnsewZLgvDBXTgAjkMUo_AByvKfAW_svVKablBICjzVLMgnrWPygPPpoS35OsEEjvZUR3zv6yM6sClXoWLxg9afRp0RETfxHuaOmUcN1D7pbMHSNynKCRhaHUxa2moAopv2c_nRGOzybtASqs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Maria",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Torres",
+									"type": "text"
+								},
+								{
+									"key": "type_person",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "document",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "maaaria@maria.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/person/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"person",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "People List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiM2M2N2RmMTY2MDI5N2M2ZjE3ODIyNzBkNTdhYjFiMDQ5ZGFhZmQ2NzhhNGEwMTRlOWI1MWQ5MzRjMzM1NzczMjQ3MTNjODA2NjM3ODgwYzgiLCJpYXQiOjE2NDc4NzA0MTQuMDE0NDUxLCJuYmYiOjE2NDc4NzA0MTQuMDE0NDU4LCJleHAiOjE2Nzk0MDY0MTMuOTk5Njc3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.tioJhWlFMzJiQnckhKbGWT-JTf087rl6hzE134qHJ36FUmTVa_3sUwBpXiYhW76OPmsgtx02Sk1AnyqOs0zATrbcpuJXiImuljgvFx4rB-iONQFNyB6IrLmXHtKqhuLYXfVa9qVbU3TkFB0ES_vpFuZy1MVoim7ilpLcWA4bBUJbjsVY72_o1mIn3ZDBMw2ZOLV_fgtIl8L7TWzBN39AuQ9aueCxDkgB9pGZVQF7yDLUSJe0jvv4v-sg-p9tdSBvOUU6rUrXmHdFUD7ahSAWq-BGkqYyK8Mm0GllPULf16oSYsFuiPbwpOs6wyI7oMprw75gPp2AglvfhKJjw3GWt0y8QHzHQtq-jzV_fcahaTLIpmMA48wgxUlh7KTkEijLl8TJWhIThqnyZa3izOLVIS1UcnUWFrPcAsjsBsVcZLN6M99NNCCDsYHfIp9t8hh4DOtfMML0XffS0joiP47KyeyjICHv4E4RvXVvxSXPekklNrbGQlKfG9zu4UgmmEwNjOFkO4mr5v4-5SLue84DBBbkJ6dnsewZLgvDBXTgAjkMUo_AByvKfAW_svVKablBICjzVLMgnrWPygPPpoS35OsEEjvZUR3zv6yM6sClXoWLxg9afRp0RETfxHuaOmUcN1D7pbMHSNynKCRhaHUxa2moAopv2c_nRGOzybtASqs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/person",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Person",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiM2M2N2RmMTY2MDI5N2M2ZjE3ODIyNzBkNTdhYjFiMDQ5ZGFhZmQ2NzhhNGEwMTRlOWI1MWQ5MzRjMzM1NzczMjQ3MTNjODA2NjM3ODgwYzgiLCJpYXQiOjE2NDc4NzA0MTQuMDE0NDUxLCJuYmYiOjE2NDc4NzA0MTQuMDE0NDU4LCJleHAiOjE2Nzk0MDY0MTMuOTk5Njc3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.tioJhWlFMzJiQnckhKbGWT-JTf087rl6hzE134qHJ36FUmTVa_3sUwBpXiYhW76OPmsgtx02Sk1AnyqOs0zATrbcpuJXiImuljgvFx4rB-iONQFNyB6IrLmXHtKqhuLYXfVa9qVbU3TkFB0ES_vpFuZy1MVoim7ilpLcWA4bBUJbjsVY72_o1mIn3ZDBMw2ZOLV_fgtIl8L7TWzBN39AuQ9aueCxDkgB9pGZVQF7yDLUSJe0jvv4v-sg-p9tdSBvOUU6rUrXmHdFUD7ahSAWq-BGkqYyK8Mm0GllPULf16oSYsFuiPbwpOs6wyI7oMprw75gPp2AglvfhKJjw3GWt0y8QHzHQtq-jzV_fcahaTLIpmMA48wgxUlh7KTkEijLl8TJWhIThqnyZa3izOLVIS1UcnUWFrPcAsjsBsVcZLN6M99NNCCDsYHfIp9t8hh4DOtfMML0XffS0joiP47KyeyjICHv4E4RvXVvxSXPekklNrbGQlKfG9zu4UgmmEwNjOFkO4mr5v4-5SLue84DBBbkJ6dnsewZLgvDBXTgAjkMUo_AByvKfAW_svVKablBICjzVLMgnrWPygPPpoS35OsEEjvZUR3zv6yM6sClXoWLxg9afRp0RETfxHuaOmUcN1D7pbMHSNynKCRhaHUxa2moAopv2c_nRGOzybtASqs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/person",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Avatar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiM2M2N2RmMTY2MDI5N2M2ZjE3ODIyNzBkNTdhYjFiMDQ5ZGFhZmQ2NzhhNGEwMTRlOWI1MWQ5MzRjMzM1NzczMjQ3MTNjODA2NjM3ODgwYzgiLCJpYXQiOjE2NDc4NzA0MTQuMDE0NDUxLCJuYmYiOjE2NDc4NzA0MTQuMDE0NDU4LCJleHAiOjE2Nzk0MDY0MTMuOTk5Njc3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.tioJhWlFMzJiQnckhKbGWT-JTf087rl6hzE134qHJ36FUmTVa_3sUwBpXiYhW76OPmsgtx02Sk1AnyqOs0zATrbcpuJXiImuljgvFx4rB-iONQFNyB6IrLmXHtKqhuLYXfVa9qVbU3TkFB0ES_vpFuZy1MVoim7ilpLcWA4bBUJbjsVY72_o1mIn3ZDBMw2ZOLV_fgtIl8L7TWzBN39AuQ9aueCxDkgB9pGZVQF7yDLUSJe0jvv4v-sg-p9tdSBvOUU6rUrXmHdFUD7ahSAWq-BGkqYyK8Mm0GllPULf16oSYsFuiPbwpOs6wyI7oMprw75gPp2AglvfhKJjw3GWt0y8QHzHQtq-jzV_fcahaTLIpmMA48wgxUlh7KTkEijLl8TJWhIThqnyZa3izOLVIS1UcnUWFrPcAsjsBsVcZLN6M99NNCCDsYHfIp9t8hh4DOtfMML0XffS0joiP47KyeyjICHv4E4RvXVvxSXPekklNrbGQlKfG9zu4UgmmEwNjOFkO4mr5v4-5SLue84DBBbkJ6dnsewZLgvDBXTgAjkMUo_AByvKfAW_svVKablBICjzVLMgnrWPygPPpoS35OsEEjvZUR3zv6yM6sClXoWLxg9afRp0RETfxHuaOmUcN1D7pbMHSNynKCRhaHUxa2moAopv2c_nRGOzybtASqs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/person/avatar/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"person",
+								"avatar",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
