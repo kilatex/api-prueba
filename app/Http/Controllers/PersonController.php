@@ -218,10 +218,8 @@ class PersonController extends Controller
                     $person_json['email'] = $request->input('email');
                     $person_json['document'] = $request->input('document');
                     $person_json['type_person'] = $request->input('type_person');
-
                     $person->update($person_json);
-
-                    // Profile image
+                    // Imagen del usuario
                     $data = array(
                         'status' => 'success',
                         'code' => '200',
